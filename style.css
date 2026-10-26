@@ -368,6 +368,44 @@ h1 { font-size: clamp(3.2rem, 8vw, 6.4rem); font-weight: 800; margin: 4px 0 14px
 .e-job2 { grid-area: job2; }
 .e-stack { grid-area: stack; }
 
+/* ---------------- TESTIMONIALS ---------------- */
+.testi { grid-template-columns: 1.6fr 1fr; }
+.testi-main { text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; padding: 38px; min-height: 300px; }
+.rec {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: .8rem;
+  padding: 4px 12px; border: 2px solid var(--black); border-radius: 999px; background: var(--cream); color: var(--black);
+}
+.rec i { width: 9px; height: 9px; border-radius: 50%; background: #ff4d5e; animation: blink 1.2s steps(1) infinite; }
+.testi-main h3 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 22px 0 10px; }
+.testi-main p { max-width: 40ch; font-size: 1.05rem; }
+.testi-main .testi-btn { margin-top: 26px; }
+.testi-btn .arrow { display: inline-block; transition: transform .2s; }
+.testi-main:hover .testi-btn .arrow { transform: translate(3px, -3px); }
+
+/* big play button */
+.testi-play {
+  text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 48px;
+  min-height: 300px;
+  background-image: radial-gradient(rgba(217,188,214,.16) 1.5px, transparent 1.5px); background-size: 18px 18px;
+}
+.testi-play .tile-label { color: var(--lav); opacity: 1; }
+.play {
+  position: relative; width: 116px; height: 116px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--lav); border: var(--bw) solid var(--lav);
+  box-shadow: 5px 5px 0 var(--blue);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s;
+}
+.play svg { width: 48px; height: 48px; fill: var(--black); margin-left: 6px; transition: transform .3s; }
+.play::before, .play::after {
+  content: ""; position: absolute; inset: -3px; border-radius: 50%;
+  border: 2px solid var(--lav); animation: ripple 2.4s ease-out infinite;
+}
+.play::after { animation-delay: 1.2s; }
+.testi-play:hover .play { transform: scale(1.1); box-shadow: 8px 8px 0 var(--blue); }
+.testi-play:hover .play svg { transform: scale(1.1); }
+@keyframes ripple { from { transform: scale(1); opacity: .8; } to { transform: scale(1.9); opacity: 0; } }
+
 /* ---------------- CONTACT ---------------- */
 .contact {
   grid-template-columns: 2fr 1fr;
@@ -494,7 +532,9 @@ body.party .tile:nth-child(2n) { animation-delay: .15s; }
       "term term";
   }
   .t-blob { min-height: 260px; }
-  .services, .exp, .contact { grid-template-columns: 1fr; }
+  .services, .exp, .contact, .testi { grid-template-columns: 1fr; }
+  .testi-main { padding: 26px 22px; min-height: 0; }
+  .testi-play { min-height: 240px; }
   .services { grid-template-areas: "wp" "shop" "ui" "auto" "seo" "web"; }
   .exp { grid-template-areas: "big" "job1" "job2" "stack"; }
   .contact { grid-template-areas: "main" "teams" "eggs"; }
