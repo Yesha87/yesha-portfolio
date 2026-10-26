@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yesha Thompson — Web Developer & Designer</title>
+  <meta name="description" content="Yesha Thompson — Web Developer, Designer & Full Stack Developer. WordPress, Shopify, Webflow, GHL, React & Next.js. 8+ years building websites for clients in Australia, the US and the UK." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23D9BCD6'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='%230b0b0b'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="logo" id="logo" aria-label="Back to top">yesha<span>.</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="egg-btn" id="eggBtn" aria-label="Easter eggs found" title="Easter eggs found">
+        <span class="egg-ico">🥚</span><span id="eggCount">0</span>/5
+      </button>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Lights on / off">
+        <span class="sun">☀</span><span class="moon">☾</span>
+      </button>
+    </div>
+    <div class="egg-pop" id="eggPop" hidden>
+      <p class="egg-pop-title">Easter egg hunt 🐣</p>
+      <ul id="eggList"></ul>
+      <p class="egg-pop-foot">Find all 5 for a surprise.</p>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO BENTO ============ -->
+    <section class="bento hero" aria-label="Introduction">
+      <article class="tile t-intro reveal">
+        <span class="status"><i></i> Available for new projects</span>
+        <p class="hi">HI! I'M</p>
+        <h1>Yesha<br />Thompson</h1>
+        <p class="roles">
+          <span class="role-rotator" id="roleRotator">Web Developer</span>
+          <span class="roles-static">building websites people love</span>
+        </p>
+        <p class="lede">I build fast, good-looking websites on WordPress, Shopify, Webflow, GHL and custom code, with SEO and automation built in.</p>
+        <div class="cta-row">
+          <a href="#work" class="btn btn-dark">See my work ↓</a>
+          <a href="#contact" class="btn btn-ghost">Let's talk</a>
+        </div>
+      </article>
+
+      <article class="tile t-lav t-blob reveal" id="blobTile">
+        <div class="speech" id="speech">psst… click me</div>
+        <button class="blob" id="blob" aria-label="A friendly blob. Click it.">
+          <span class="eye"><span class="pupil"></span></span>
+          <span class="eye"><span class="pupil"></span></span>
+          <span class="mouth"></span>
+        </button>
+        <span class="tile-label">my coding buddy</span>
+      </article>
+
+      <article class="tile t-dark t-stat t-yrs reveal">
+        <span class="big" data-count="8">0</span><span class="big-plus">+</span>
+        <span class="stat-label">years building for the web</span>
+      </article>
+
+      <article class="tile t-blue t-stat t-sites reveal">
+        <span class="big" data-count="15">0</span><span class="big-plus">+</span>
+        <span class="stat-label">live sites in this portfolio</span>
+      </article>
+
+      <article class="tile t-clients reveal">
+        <span class="tile-label">working remotely with clients in</span>
+        <div class="flags">
+          <span class="flag">AUS</span><span class="flag">US</span><span class="flag">UK</span>
+        </div>
+      </article>
+
+      <article class="tile t-tools reveal">
+        <span class="tile-label">my toolkit</span>
+        <div class="marquee" aria-label="Tools">
+          <div class="marquee-track" id="marquee"></div>
+        </div>
+      </article>
+
+      <button class="tile t-dark t-term reveal" id="termTile" aria-label="Open the secret terminal">
+        <span class="mono">~/yesha $ <span class="blink">▋</span></span>
+        <span class="term-hint">press <kbd>`</kbd> or click to open the terminal</span>
+      </button>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <span class="kicker">01 — Services</span>
+        <h2>What I can build for you</h2>
+      </div>
+      <div class="bento services">
+        <article class="tile t-lav s-wp reveal">
+          <span class="s-ico">WP</span>
+          <h3>WordPress development</h3>
+          <p>I customize and modify premium themes, and I work with custom and child themes. I build with Elementor, Divi and Beaver Builder.</p>
+          <div class="chips"><span>Elementor</span><span>Divi</span><span>Beaver</span><span>Child themes</span></div>
+        </article>
+        <article class="tile t-dark s-shop reveal">
+          <span class="s-ico">SH</span>
+          <h3>Shopify stores</h3>
+          <p>I build custom and theme-based stores from scratch, then set up the apps, payment gateways and products. I also work directly in Liquid code.</p>
+          <div class="chips"><span>Liquid</span><span>Apps</span><span>Payments</span><span>Products</span></div>
+        </article>
+        <article class="tile s-ui reveal">
+          <span class="s-ico">✦</span>
+          <h3>Design / UI</h3>
+          <p>I design in Figma, Illustrator, InDesign and AI design tools, then hand-build the result in HTML5, CSS3, Bootstrap, JS and jQuery.</p>
+        </article>
+        <article class="tile t-blue s-auto reveal">
+          <span class="s-ico">⚡</span>
+          <h3>Automation &amp; APIs</h3>
+          <p>I set up workflow automation and API integrations with Zapier, Make.com, GHL and Zoho.</p>
+        </article>
+        <article class="tile s-seo reveal">
+          <span class="s-ico">↗</span>
+          <h3>SEO / AEO / GEO</h3>
+          <p>I make sites easy to find on Google, in answer engines and in AI search.</p>
+        </article>
+        <article class="tile t-lav s-web reveal">
+          <span class="s-ico">⚙</span>
+          <h3>Webmaster tasks</h3>
+          <p>I handle domain and hosting registrations, WHM setup, cPanel configuration and 301 redirects.</p>
+          <div class="chips"><span>Domains</span><span>Hosting</span><span>WHM</span><span>cPanel</span><span>301s</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <span class="kicker">02 — Selected work</span>
+        <h2>Sites I've built</h2>
+      </div>
+      <div class="filters reveal" role="tablist" aria-label="Filter projects">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="wordpress">WordPress</button>
+        <button class="pill" data-filter="shopify">Shopify</button>
+        <button class="pill" data-filter="webflow">Webflow</button>
+        <button class="pill" data-filter="custom">Custom builds</button>
+        <button class="pill" data-filter="react">React &amp; Next.js</button>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <span class="kicker">03 — Experience</span>
+        <h2>8+ years, fully remote</h2>
+      </div>
+      <div class="bento exp">
+        <article class="tile t-dark e-big reveal">
+          <span class="big">8+</span>
+          <p>years designing and developing websites for brands and businesses around the world.</p>
+        </article>
+        <article class="tile e-job e-job1 reveal">
+          <span class="tile-label">Role</span>
+          <h3>GEC Transfers</h3>
+          <p>2 years · Remote</p>
+        </article>
+        <article class="tile t-lav e-job e-job2 reveal">
+          <span class="tile-label">Role</span>
+          <h3>Agency work</h3>
+          <p>Remote · clients in AUS, US &amp; UK</p>
+        </article>
+        <article class="tile t-blue e-stack reveal">
+          <span class="tile-label">Platforms I ship on</span>
+          <div class="chips big-chips" id="stackChips"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="bento contact">
+        <article class="tile t-dark c-main reveal">
+          <span class="kicker light">04 — Contact</span>
+          <h2>Got a project in mind?<br /><span class="hl">Let's build it.</span></h2>
+          <div class="cta-row">
+            <a class="btn btn-lav" href="mailto:yeshathompson87@gmail.com">Email me →</a>
+            <button class="btn btn-ghost-light" id="copyEmail">Copy email</button>
+          </div>
+          <p class="mono small">yeshathompson87@gmail.com</p>
+        </article>
+        <article class="tile t-lav c-teams reveal">
+          <span class="tile-label">Microsoft Teams</span>
+          <h3>yeshathompson87</h3>
+        </article>
+        <article class="tile t-blue c-eggs reveal">
+          <span class="tile-label">Easter eggs found</span>
+          <div class="egg-meter"><span id="eggMeter"></span></div>
+          <h3><span id="eggCount2">0</span> / 5</h3>
+          <p class="small" id="eggTease">There are secrets hidden on this page…</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Yesha Thompson · © <span id="year"></span></p>
+    <p class="mono small">↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </footer>
+
+  <!-- ============ TERMINAL ============ -->
+  <div class="term-overlay" id="termOverlay" hidden>
+    <div class="term" role="dialog" aria-modal="true" aria-label="Secret terminal">
+      <div class="term-bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="mono">yesha@portfolio: ~</span>
+        <button class="term-close" id="termClose" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="term-body" id="termBody"></div>
+      <form class="term-input" id="termForm" autocomplete="off">
+        <span class="mono prompt">~ $</span>
+        <input id="termInput" class="mono" spellcheck="false" aria-label="Terminal command" />
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
